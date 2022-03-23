@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <img src="./assets/img/logo.png" alt="logo de careswitch">
         <h2>Login Screen</h2>
     </header>
     <form action="">
@@ -20,11 +21,20 @@
             <input type="text" placeholder="Número de teléfono">
         </div>
         <input type="text" placeholder="Email">
-        <input type="text" placeholder="Fecha de nacimiento">
+        <label for="birthdate">Fecha de nacimiento</label>
+        <div id="birthdate"> 
+            <input type="text" placeholder="Día">
+            <input type="text" placeholder="Mes">
+            <input type="text" placeholder="Año">
+        </div>
         <input type="text" placeholder="Contraseña">
         <input type="text" placeholder="Repite la contraseña">
-        <input type="radio" name="cookies">
-        <label for="cookies">Aceptas la política de privacidad</label>
+        <div id="cookies">
+            <input type="radio" name="cookies">
+            <label for="cookies">Aceptas la política de privacidad</label>
+        </div>
+        <button>Registrarse</button>
+
     </form>
 </body>
 </html>
