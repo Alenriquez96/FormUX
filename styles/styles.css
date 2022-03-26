@@ -3,6 +3,9 @@
 *{
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 600;
 }
 body{
     display: flex;
@@ -20,12 +23,31 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 104px;
     color: white;
     
 }
-header>img{
-    margin-top: 30px;
+header>h2{
+    font-size: 21px;
+    word-wrap: normal;
+    text-align: center;
+    width: 100%;
+}
+#imagenes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#imagenes>img,#imagenes>a{
+    margin-top: 40px;
+}
+#imagenes>:first-child{
+    height: 17px;
+    margin-left: 10px;
+}
+#imagenes>:last-child{
+    height: 17px;
+    margin-right: 10px;
 }
 
 form{
@@ -78,6 +100,7 @@ form>input:focus {
 #birthdate{
     display: flex;
     flex-direction: row;
+    width: 90%;
 }
 #birthdate>input{
     width: 30%;
@@ -97,8 +120,10 @@ label{
     font-style: normal;
     align-self: flex-start;
 }
-button{
-    color: #CCCDF9;
+#btn{
+    cursor: pointer;
+    color: #F2F2F2;
+    background-color: #CCCDF9;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,5 +131,146 @@ button{
     padding: 16px ;
     margin: 15px;
     width: 80%;
+    border-radius: 8px;
+    border: 0px;
 
+}
+#cookies{
+    width: 300px;
+}
+#cookiesRadio{
+    accent-color: #5D5FEF;
+}
+#progress{
+    width: 220px;
+}
+
+#seguridad>p{
+font-weight: 600;
+}
+#seguridad>ul>li{
+    color: #BDBDBD;
+    font-weight: 600;
+}
+li{ 
+    list-style-image: url(../assets/img/tick.png); 
+}
+
+#imgCC{
+    display: none;
+    margin: 30px 0;
+}
+body>a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#inicio{
+    cursor: pointer;
+    color: #F2F2F2;
+    background-color: #5D5FEF;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px ;
+    margin: 15px;
+    width: 80%;
+    border-radius: 8px;
+    border: 0px;
+}
+
+form>label{
+    width: 90%;
+    margin-left: 10%;
+}
+
+
+
+ /* ---------------------------ERRORES--------------------------  */
+
+#errorEmail{
+    width: 90%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #EB5757;
+    font-size: 10px;
+}
+#errorEmail>p{
+    font-size: 10px;
+}
+#errorEmail>img{
+    margin-right: 10px;
+    height: 15px;
+}
+#errorPass{
+    width: 90%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #EB5757;
+    font-size: 10px;
+}
+#imgPass{
+    height: 15px;
+    margin-right: 10px;
+}
+#errorPass>p{
+    font-size: 10px;
+}
+
+#errorFill{
+    width: 90%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #EB5757;
+    font-size: 10px;
+}
+#errorFill>p{
+    font-size: 10px;
+}
+#errorimgFill{
+    height: 15px;
+    margin-right: 5px;
+}
+#errorYear{
+    width: 90%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #EB5757;
+    font-size: 10px;
+}
+#errorCookies{
+    width: 90%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #EB5757;
+    font-size: 10px;
+}
+#imgCookies{
+    margin-right: 10px;
+    height: 15px;
+}
+#errorCookies>p{
+    font-size: 10px;
+}
+#ErrorTlf{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #EB5757;
+    font-size: 10px;
 }
