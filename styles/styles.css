@@ -42,13 +42,24 @@ form>input{
     border-radius: 8px;
     width: 90%;
     background-color: #F2F2F2;
-    border: 1px solid #BDBDBD
+    border: 1px solid #BDBDBD;
+    
+}
+form>input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0px 0px 4px #5D5FEF;
 }
 #numTel{
 
     width: 90%;
     margin: 10px;
 
+}
+#numTel>input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0px 0px 4px #5D5FEF;
 }
 
 #numTel>:first-child{
@@ -75,6 +86,11 @@ form>input{
     background-color: #F2F2F2;
     border: 1px solid #BDBDBD
 
+}
+#birthdate>input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0px 0px 4px #5D5FEF;
 }
 label{
     margin: 0 10px;
