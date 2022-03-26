@@ -116,7 +116,7 @@ function mustBeFilled() {
         contador++
     }
     else{
-        console.log("el telefono ser un numero");
+        console.log("el telefono debe estar relleno y no ser un número");
         tel.style.boxShadow = "0px 0px 4px rgba(235, 87, 87, 0.8)";
         document.getElementById("ErrorTlf").innerHTML ="El telefono debe ser un número";
     }
@@ -154,8 +154,9 @@ function validatePasswords() {
 };
 
 const inputs = document.getElementsByClassName("input");
+console.log(inputs,cookies);
 for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value != "") {
+    if (inputs.value != "" && cookies.checked) {
         document.getElementById("btn").style.backgroundColor = "#5D5FEF";
     }
 }
@@ -164,7 +165,9 @@ for (let i = 0; i < inputs.length; i++) {
 //----------------Esta función activa la barra de seguridad de la contraseña
 pass1.addEventListener('keyup', function() {
 
-    var pwd = pass1.value
+    document.getElementById("seguridad").style.display="block";
+
+    let pwd = pass1.value
   
     // Reset if password length is zero
     if (pwd.length === 0) {
@@ -173,7 +176,7 @@ pass1.addEventListener('keyup', function() {
     }
   
     // Check progress
-    var prog = [/[A-Z]/, /[0-8]/, /[a-z]/]
+    let prog = [/[A-Z]/, /[0-8]/, /[a-z]/]
       .reduce((memo, test) => memo + test.test(pwd), 0);
   
     // Length must be at least 8 chars
@@ -182,7 +185,7 @@ pass1.addEventListener('keyup', function() {
     }
   
     // Display it
-    var progress = "";
+    let progress = "";
     switch (prog) {
       case 0:
       case 1:
@@ -206,10 +209,11 @@ pass1.addEventListener('keyup', function() {
         break;
     }
     document.getElementById("progress").value = progress;
-  });
+});
 
 
-  document.getElementById("form").addEventListener("submit",function validate(e) {
+
+document.getElementById("form").addEventListener("submit",function validate(e) {
     e.preventDefault();
     mustBeFilled();
     validateEmail();
@@ -221,5 +225,4 @@ pass1.addEventListener('keyup', function() {
         document.getElementById("imgCC").style.display="flex";
         document.getElementById("inicio").style.display="flex";
     }
-
 })

@@ -144,6 +144,9 @@ label{
 #progress{
     width: 220px;
 }
+#seguridad{
+    display: none;
+}
 
 #seguridad>p{
 font-weight: 600;
