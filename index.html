@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormUX</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <div id="imagenes">
+            <a href="./index.html">
+                <img src="./assets/img/Vector.png" alt="boton de atras">
+            </a> 
+            <img src="./assets/img/logo.png" alt="logo de careswitch">
+            <img src="./assets/img/Vector (1).png" alt="burguer">
+        </div>
+        <h2>Crea tu cuenta de CareSwitch</h2>
+    </header>
+    <form action="" id="form">
+        <div id="errorFill">
+            <img id="errorimgFill" src="./assets/img/iconito_error.png" alt="iconito_error">
+            <p>Los campos que aparecen en rojo deben estar rellenos</p>
+        </div>
+        <input id="nombre" class="input" type="text" placeholder="Nombre">
+        <input id="apellidos" class="input" type="text" placeholder="Apellidos">
+        <input id="dl" list="datalist" class="input" placeholder="País">
+            <datalist id="datalist">
+                <option value="Australia">
+                <option value="Estados Unidos">
+                <option value="Guinea">
+                <option value="Letonia">
+                <option value="España">
+                <option value="Portugal">
+                <option value="Francia">
+            </datalist>
+        <div id="numTel">
+            <input id="prefix" type="text" placeholder="+34" maxlength="4">
+            <input id="telefono" type="text" class="input" placeholder="Número de teléfono">
+        </div>
+        <div id="ErrorTlf"></div>
+        <label for="birthdate">Fecha de nacimiento</label>
+        <div id="birthdate"> 
+            <input id="day" type="text" class="input" placeholder="Día" maxlength="2">
+            <input id="month" type="text" class="input" placeholder="Mes" maxlength="2">
+            <input id="year" type="text" class="input" placeholder="Año" maxlength="4">
+        </div>
+        <div id="errorYear"></div>
+        <input id="email" class="input" type="text" name="email" placeholder="Email">
+        <div id="errorEmail">
+            <img id="imgError" src="./assets/img/iconito_error.png" alt="iconito_error">
+            <p>Introduce una dirección de correo electrónico valida para tu cuenta CareSwitch</p>
+        </div>
+        <input id="pass1" class="input" type="password" placeholder="Contraseña">
+        <div id="seguridad">
+            <p>Tu contraseña debe contener:</p>
+            <ul>
+                <li id="caracteres">8 o más caracteres</li>
+                <li id="letras">Al menos una letra mayúscula y una minúscula</li>
+                <li id="numeros">Al menos un número</li>
+            </ul>
+            <p>Seguridad:</p>
+            <progress id="progress" value="0" max="100"></progress>
+        </div>
+        <input id="pass2" class="input" type="password" placeholder="Repite la contraseña">
+        <div id="errorPass">
+            <img id="imgPass" src="./assets/img/iconito_error.png" alt="iconito_error">
+        </div>
+        <div id="cookies">
+            <input id="cookiesRadio" type="radio" name="cookies">
+            <label for="cookies">Aceptas la política de privacidad</label>
+        </div>
+        <div id="errorCookies">
+            <img id="imgCookies" src="./assets/img/iconito_error.png" alt="errorCookies">
+        </div>
+        <button id="btn">Registrarse</button>
+    </form>
+    <img id="imgCC" src="./assets/img/Ilustración cuenta creada.png" alt="Cuenta creada">
+    <a href="./index.html"><button id="inicio">Volver al inicio</button></a>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
