@@ -123,7 +123,7 @@ label{
 #btn{
     cursor: pointer;
     color: #F2F2F2;
-    background-color: #CCCDF9;
+    background-color: #5D5FEF;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -150,6 +150,10 @@ label{
 
 #seguridad>p{
 font-weight: 600;
+margin: 0;
+}
+#seguridad>ul{
+    margin: 0;
 }
 #seguridad>ul>li{
     color: #BDBDBD;
@@ -223,9 +227,6 @@ form>label{
     height: 15px;
     margin-right: 10px;
 }
-#errorPass>p{
-    font-size: 10px;
-}
 
 #errorFill{
     width: 90%;
@@ -265,9 +266,7 @@ form>label{
     margin-right: 10px;
     height: 15px;
 }
-#errorCookies>p{
-    font-size: 10px;
-}
+
 #ErrorTlf{
     width: 90%;
     display: flex;

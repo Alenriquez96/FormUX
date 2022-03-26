@@ -18,6 +18,7 @@ const year = document.getElementById("year");
 
 
 //----El contador de campos validados-------------//
+
 let contador = 0;
 
 //---------Esta función hace que los campos deban estar rellenos----------//
@@ -45,6 +46,7 @@ function mustBeFilled() {
         cookies.style.boxShadow = "0px 0px 4px rgba(235, 87, 87, 0.8)";
         document.getElementById("errorFill").style.display="flex";
         document.getElementById("errorCookies").style.display="flex";
+        document.getElementById("errorCookies").innerHTML="Debes aceptar la política de privacidad"
     }
     else{
         contador+=1;
@@ -146,20 +148,18 @@ function validatePasswords() {
     else if (reGexPass.test(pass1.value) != true){
         console.log("algo falla en pass1");
         pass1.style.boxShadow = "0px 0px 4px rgba(235, 87, 87, 0.8)";
+        document.getElementById("errorPass").innerHTML="La contraseña es demasiado débil"
+        document.getElementById("errorPass").style.display="flex"
+
     }
     else if ((pass1.value != pass2.value)) {
         console.log("Las pass no son iguales");
-        document.getElementById("errorPass").style.display="flex"
+        document.getElementById("errorPass").style.display= "flex";
+        document.getElementById("errorPass").innerHTML= "Las contraseñas no coinciden";
+
     }
 };
 
-const inputs = document.getElementsByClassName("input");
-console.log(inputs,cookies);
-for (let i = 0; i < inputs.length; i++) {
-    if (inputs.value != "" && cookies.checked) {
-        document.getElementById("btn").style.backgroundColor = "#5D5FEF";
-    }
-}
 
 
 //----------------Esta función activa la barra de seguridad de la contraseña
