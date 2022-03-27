@@ -211,14 +211,6 @@ pass1.addEventListener('keyup', function() {
     document.getElementById("progress").value = progress;
 });
 
-const inputs = document.querySelectorAll(".input");
-for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value.length>0) {
-        document.getElementById("btn").style.backgroundColor="red";
-    }    
-}
-
-
 
 document.getElementById("form").addEventListener("submit",function validate(e) {
     e.preventDefault();
